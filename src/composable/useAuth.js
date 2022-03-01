@@ -1,7 +1,7 @@
 import { ref } from "vue";
 import {
-  createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
   signOut,
   GoogleAuthProvider,
   signInWithPopup,
@@ -28,6 +28,7 @@ const useAuth = () => {
       username,
       password
     );
+
     if (credentials.user) {
       isAuthenticated.value = true;
       user.value = credentials.user.email;
@@ -40,6 +41,7 @@ const useAuth = () => {
       username,
       password
     );
+
     if (credentials.user) {
       isAuthenticated.value = true;
       user.value = credentials.user.email;
